@@ -2,6 +2,7 @@
   --dark-color:#31343D;
   --Primary-color:#A52A2A;
   --titles_color:#e84242;
+  --work_area_color:rgb(198, 198, 95);
 }
 
 * {
@@ -125,28 +126,36 @@ section .hero_article img{
 /* Work Section */
 
 /* Use Grid Method For Responsivness and Better Experience */
-.work_grid{display: grid; grid-template-rows: 1fr 1fr 1fr 1fr; grid-template-columns: 1fr 1fr;
-grid-template-areas:
- "grid_1 grid_1" 
- "grid_2 grid_3"
- "grid_4 grid_5";}
+.work_grid{display: grid;grid-template-rows: 1fr 1fr 1fr;grid-template-columns: 1fr 1fr;grid-template-areas:
+"grid_1 grid_1"
+"grid_2 grid_3"
+"grid_4 grid_5";grid-gap: 10px;}
  .work_grid .grid_1{grid-area: grid_1;}
  .work_grid .grid_2{grid-area: grid_2;}
  .work_grid .grid_3{grid-area: grid_3;}
  .work_grid .grid_4{grid-area: grid_4;}
  .work_grid .grid_5{grid-area: grid_5;}
-/* Grid Images only CSS */
-.work_grid .grid_1 .first_layer {background-image: url(../images/Works/Horiseon.png);}
-.work_grid .grid_2 .first_layer {background-image: url(../images/Works/Cell\ &\ Gen.png);}
-.work_grid .grid_3 .first_layer {background-image: url(../images/Works/Elab\ Education\ Expo\ 2021.PNG);}
-.work_grid .grid_4 .first_layer {background-image: url(../images/Works/Dental\ Public\ Health\ Workforce.PNG);}
-.work_grid .grid_5 .first_layer {background-image: url(../images/Works/Picus.png);}
+
 
 .work_grid .grid_column{}
-.work_grid .grid_column .first_layer{}
-.work_grid .grid_column .first_layer {width: 100%;height: 300px;background-position: top;background-repeat: no-repeat;border: 3px solid sandybrown;background-size: cover;}
 
-.work_grid .grid_column .first_layer img{}
-.work_grid .grid_column .second_layer{}
-.work_grid .grid_column .second_layer h4{}
-.work_grid .grid_column .second_layer p{}
+.work_grid .grid_column .grid_Card {width: 100%;height: 300px;background-position: top;background-repeat: no-repeat;border: 5px solid var(--work_area_color);background-size: cover;overflow: hidden;position: relative;}
+
+.work_grid .grid_column .grid_Card img{
+    width: 100%;
+}
+.work_grid .grid_column .grid_bio{
+    position: absolute;
+    color: white;
+    background-color: var(--work_area_color);
+    top: 65%;
+    padding: 10px 25px 10px 30px;
+    border-top-right-radius: 25px;
+}
+.work_grid .grid_column .grid_bio h4{
+    font-size: 18px;
+}
+.work_grid .grid_column .grid_bio p{
+    font-size: 14px;
+    padding: 0px;
+}
