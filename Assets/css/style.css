@@ -1,10 +1,13 @@
 :root{
-  --dark-color:#31343D;
-  --Primary-color:#A52A2A;
+  --dark-color: #3E3D3F;
+  --Primary-color: #820000;
   --titles_color:#e84242;
-  --work_area_color:rgb(198, 198, 95);
+  --work_area_color: #FFE569;
+ --Navbar_tab_color: #00ebff;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 * {
   box-sizing: border-box;
 }
@@ -31,12 +34,13 @@ header{background-color: var(--dark-color);padding: 10px 20px;}
 header h1{
     display: inline-block;
     color: white;
-    background-color: brown;
+    background-color: var(--Primary-color);
     width: 300px;
     text-align: right;
     position: relative;
     left: -20px;
-    padding: 2px 20px 2px 0px;
+    padding: 2px 26px 2px 0px;
+    font-size: 36px;
 }
 /* Navbar Section */
 nav{
@@ -55,7 +59,7 @@ nav ul li .nav_item{
     transition: 0.4s ease-in-out;
 }
 .nav_item:hover{
-  color: var(--Primary-color);
+  color: var(--Navbar_tab_color);
   transition: linear;
   transition: 0.4s ease-in-out;
 }
@@ -65,7 +69,7 @@ nav ul li .nav_item{
   display: block;
   width: 0px;
   height: 2px;
-  background:var(--Primary-color);
+  background:var(--Navbar_tab_color);
   transition: width.3s;
 }
 
@@ -109,7 +113,7 @@ section .hero_article img{
     width: 15%;
 }
     section .flex_container .flex_left h2{
-    font-size: 33px;
+    font-size: 34px;
 }
     section .flex_container .flex_right{
     padding-left: 58px;
@@ -146,7 +150,7 @@ section .hero_article img{
 }
 .work_grid .grid_column .grid_bio{
     position: absolute;
-    color: white;
+    color: black;
     background-color: var(--work_area_color);
     top: 65%;
     padding: 10px 25px 10px 30px;
@@ -171,11 +175,12 @@ section .hero_article img{
 #contact_me .flex_right ul li a{
     text-decoration: none;
     color: black;
+    font-size: 20px;
 }
 #contact_me .flex_right ul li a::after{
   content: '';
   display: block;
- width:100%;
- height:3px;
- background-color:var(--work_area_color);
+  width:100%;
+  height:3px;
+  background-color: var(--Primary-color);
 }
