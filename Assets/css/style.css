@@ -1,6 +1,7 @@
 :root{
   --dark-color:#31343D;
-  --Primary-color:red;
+  --Primary-color:#A52A2A;
+  --titles_color:#e84242;
 }
 
 * {
@@ -40,11 +41,11 @@ header h1{
 nav{
   float: right;
 }
-nav ul{}
 nav ul li {
     display: inline-block;
     margin: 0px 18px;
 }
+/* nav_item is the class of A tag in navbar */
 nav ul li .nav_item{
     color: white;
     font-size: 18px;
@@ -57,6 +58,7 @@ nav ul li .nav_item{
   transition: linear;
   transition: 0.4s ease-in-out;
 }
+/* TO add some transition Effect in Navbar */
 .nav_item::after{
   content: '';
   display: block;
@@ -71,3 +73,71 @@ nav ul li .nav_item{
   transition: linear;
   transition: width .3s;
 }
+
+/* Hero Banner */
+main .hero-banner{
+  background-image: url("../images/Hero_image.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+section .hero_article{
+    padding: 20px;
+}
+section .hero_article h2{
+    text-align: right;
+    color: white;
+    display: block;
+}
+section .hero_article h2 span{
+  background-color: var(--Primary-color);
+  padding: 10px;
+}
+section .hero_article img{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: relative;
+  margin-left: 20px;
+}
+.container{max-width: 1200; margin: auto;}
+/* About Section */
+    section .flex_container{display: flex;padding: 72px;}
+    section .flex_container .flex_left{
+    text-align: right;
+    width: 15%;
+}
+    section .flex_container .flex_left h2{
+    font-size: 33px;
+}
+    section .flex_container .flex_right{
+    padding-left: 58px;
+    border-left: 4px solid var(--Primary-color);
+    margin-left: 37px;
+    width: 85%;
+}
+    section .flex_container .flex_right p{
+    padding: 10px 0px;
+    font-size: 16px;
+
+}
+
+/* Work Section */
+
+/* Use Grid Method For Responsivness and Better Experience */
+.work_grid{}
+/* Grid Images only CSS */
+.work_grid .grid_1 .first_layer {background-image: url(../images/Works/);}
+.work_grid .grid_2 .first_layer {background-image: url(../images/Work1.PNG);}
+.work_grid .grid_3 .first_layer {background-image: url(../images/Work1.PNG);}
+.work_grid .grid_4 .first_layer {background-image: url(../images/Work1.PNG);}
+.work_grid .grid_5 .first_layer {background-image: url(../images/Work1.PNG);}
+
+.work_grid .grid_column{}
+.work_grid .grid_column .first_layer{}
+.work_grid .grid_column .first_layer {width: 100%;height: 300px;background-position: top;background-repeat: no-repeat;border: 3px solid sandybrown;background-size: cover;}
+
+.work_grid .grid_column .first_layer img{}
+.work_grid .grid_column .second_layer{}
+.work_grid .grid_column .second_layer h4{}
+.work_grid .grid_column .second_layer p{}
