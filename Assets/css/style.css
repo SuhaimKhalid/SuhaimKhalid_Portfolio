@@ -125,13 +125,22 @@ section .hero_article img{
 /* Work Section */
 
 /* Use Grid Method For Responsivness and Better Experience */
-.work_grid{}
+.work_grid{display: grid; grid-template-rows: 1fr 1fr 1fr 1fr; grid-template-columns: 1fr 1fr;
+grid-template-areas:
+ "grid_1 grid_1" 
+ "grid_2 grid_3"
+ "grid_4 grid_5";}
+ .work_grid .grid_1{grid-area: grid_1;}
+ .work_grid .grid_2{grid-area: grid_2;}
+ .work_grid .grid_3{grid-area: grid_3;}
+ .work_grid .grid_4{grid-area: grid_4;}
+ .work_grid .grid_5{grid-area: grid_5;}
 /* Grid Images only CSS */
-.work_grid .grid_1 .first_layer {background-image: url(../images/Works/);}
-.work_grid .grid_2 .first_layer {background-image: url(../images/Work1.PNG);}
-.work_grid .grid_3 .first_layer {background-image: url(../images/Work1.PNG);}
-.work_grid .grid_4 .first_layer {background-image: url(../images/Work1.PNG);}
-.work_grid .grid_5 .first_layer {background-image: url(../images/Work1.PNG);}
+.work_grid .grid_1 .first_layer {background-image: url(../images/Works/Horiseon.png);}
+.work_grid .grid_2 .first_layer {background-image: url(../images/Works/Cell\ &\ Gen.png);}
+.work_grid .grid_3 .first_layer {background-image: url(../images/Works/Elab\ Education\ Expo\ 2021.PNG);}
+.work_grid .grid_4 .first_layer {background-image: url(../images/Works/Dental\ Public\ Health\ Workforce.PNG);}
+.work_grid .grid_5 .first_layer {background-image: url(../images/Works/Picus.png);}
 
 .work_grid .grid_column{}
 .work_grid .grid_column .first_layer{}
