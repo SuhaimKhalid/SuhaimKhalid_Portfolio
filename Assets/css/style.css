@@ -4,12 +4,13 @@
   --Primary-color: #820000;
   --titles_color:#e84242;
   --work_area_color: #FFE569;
- --Navbar_tab_color: #00ebff;
+  --Navbar_tab_color: #00ebff;
 }
 /* For Webpage to scroll Smooth */
 html{
   scroll-behavior: smooth;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -28,6 +29,7 @@ h1,h2,h3,h4,h5,h6 {
 p {
   margin: 0;
 }
+/* Container to make site content in a specific area*/
 .container{max-width: 1200px;margin: auto;}
 
 /* Header Section */
@@ -96,10 +98,12 @@ section .hero_article h2{
     color: white;
     display: block;
 }
+/* Use span to give only h2 content specific color */
 section .hero_article h2 span{
   background-color: var(--Primary-color);
   padding: 10px;
 }
+/* Picture of User */
 section .hero_article img{
   width: 300px;
   height: 300px;
@@ -107,31 +111,36 @@ section .hero_article img{
   position: relative;
   margin-left: 20px;
 }
+/* Main body background_COlor */
 main{
     background: #e4f2fe;
 }
 
-/* About Section */
-    section .flex_container{display: flex;padding: 72px;}
-    section .flex_container .flex_left{
+
+/* Main Section Css For all Articles */
+  section .flex_container{display: flex;padding: 72px;}
+  section .flex_container .flex_left{
     text-align: right;
     width: 15%;
-}
+  }
     section .flex_container .flex_left h2{
     font-size: 34px;
     color: var(--Primary-color);
-}
+  }
     section .flex_container .flex_right{
     padding-left: 58px;
     border-left: 4px solid var(--Primary-color);
     margin-left: 37px;
     width: 85%;
-}
-    section .flex_container .flex_right > p{
-    padding: 10px 0px;
-    font-size: 16px;
+  }
 
+
+/* About Section */
+#about .flex_container .flex_right > p{
+  padding: 10px 0px;
+  font-size: 16px;
 }
+  
 
 /* Work Section */
 
@@ -158,7 +167,7 @@ grid-gap: 10px;}
 .work_grid .grid_column .grid_Card img{
     width: 100%;
 }
-/* Css for grid card title section */
+/* Css for grid card Bio section */
 .work_grid .grid_column .grid_bio{
     position: absolute;
     color: black;
@@ -206,7 +215,9 @@ grid-gap: 10px;}
   width: 100%;
   margin-bottom: 20px;
 }
+/* To stop working of Br tag in HTML */
 .flex_left h2 >br{display: none;}
+/* Main section Flex styling */
   section .flex_container .flex_right{
     padding-left: 0px;
     border-top: 4px solid var(--Primary-color);
@@ -219,24 +230,27 @@ grid-gap: 10px;}
 
 /* Media Query For Navbar Responsivness on tablet view point */
 @media screen and (max-width:992px) {
+  /* Header section */
   header{padding: 0px;}
   header h1{
-    display: block;
-    width: 100%;
-    text-align: center;
-    position: relative;
-    left: 0px;
-    padding: 10px 0px;
-}
-nav{
+  display: block;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  left: 0px;
+  padding: 10px 0px;
+  }
+  /* Navbar Section Styling */
+  nav{
   float: none;
   text-align: center;
-}
-nav ul{
-    padding: 16px 0px;
-    margin: 0px;
-}
+  }
+  nav ul{
+  padding: 16px 0px;
+  margin: 0px;
+  }
   section .flex_container{padding:15px}
+  
 /* For Hero Image Responsiveness */
   section .hero_article h2{
     text-align: center;
@@ -288,6 +302,7 @@ nav ul{
   background-color:black;
   transition: width 0.3s;
 }
+/* Add Hover effect like Navbar in Contact Me Section */
 #contact_me .flex_right ul li a:hover{
   color: var(--Primary-color);
   transition: linear;
