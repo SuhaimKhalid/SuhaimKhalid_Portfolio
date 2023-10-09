@@ -202,7 +202,7 @@ grid-gap: 10px;}
 
   section .flex_container{flex-wrap:wrap;padding: 20px 50px;}
   section .flex_container .flex_left{
-  text-align: center;
+  text-align: left;
   width: 100%;
   margin-bottom: 20px;
 }
