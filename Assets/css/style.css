@@ -1,6 +1,6 @@
 /* Color Scheme which use in whole page */
 :root{
-  --dark-color: #3E3D3F;
+  --dark-color: #282729;
   --Primary-color: #820000;
   --titles_color:#e84242;
   --work_area_color: #FFE569;
@@ -61,7 +61,7 @@ nav ul li .nav_item{
 }
 /* Hover Effect which work on when mouse hover here */
 .nav_item:hover{
-  color: var(--Navbar_tab_color);
+  color: var(--titles_color);
   transition: linear;
   transition: 0.4s ease-in-out;
 }
@@ -71,7 +71,7 @@ nav ul li .nav_item{
   display: block;
   width: 0px;
   height: 2px;
-  background:var(--Navbar_tab_color);
+  background:var(--titles_color);
   transition: width.3s;
 }
 
@@ -180,7 +180,9 @@ grid-gap: 10px;}
     display: flex;
     justify-content: space-between;
     list-style: none;
+    flex-wrap: wrap;
 }
+#contact_me .flex_right ul li{margin:0px 10px}
 #contact_me .flex_right ul li a{
     text-decoration: none;
     color: black;
@@ -192,4 +194,68 @@ grid-gap: 10px;}
   width:100%;
   height:3px;
   background-color: var(--Primary-color);
+}
+
+/* Media Query For Responsivness on 992px which is one of the standard size */
+@media screen and (max-width:1200px) {
+  /* Main section flex Styling */
+
+  section .flex_container{flex-wrap:wrap;padding: 20px 50px;}
+  section .flex_container .flex_left{
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.flex_left h2 >br{display: none;}
+  section .flex_container .flex_right{
+    padding-left: 0px;
+    border-top: 4px solid var(--Primary-color);
+    border-left: none;
+    margin-left: 0px;
+    width: 100%;
+    padding-top: 10px;
+  }
+}
+
+/* Media Query For Navbar Responsivness on tablet view point */
+@media screen and (max-width:992px) {
+  header{padding: 0px;}
+  header h1{
+    display: block;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    left: 0px;
+    padding: 10px 0px;
+}
+nav{
+  float: none;
+  text-align: center;
+}
+nav ul{
+    padding: 16px 0px;
+    margin: 0px;
+}
+/* For Hero Image Responsiveness */
+  section .hero_article h2{
+    text-align: right;
+    color: white;
+    display: block;
+  }
+  section .hero_article h2 span{
+  background-color: var(--Primary-color);
+  padding: 10px;
+  }
+  section .hero_article img{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: relative;
+  margin-left: 20px;
+  }
+}
+
+/* Media Query for Small Sizes */
+@media screen and (max-width:767px){
+
 }
